@@ -1,0 +1,38 @@
+{
+	"name": "brisk-api",
+	"version": "0.0.1",
+	"description": "Brisk module that creates API endpoints, authenticated with OAuth2",
+	"author": "makesites",
+	"contributors": [
+		{
+			"name": "Makis Tracend",
+			"email": "makis@makesit.es"
+		}
+	],
+	"homepage": "http://makesites.org/brisk",
+	"keywords": [
+		"node", "brisk", "api", "connect", "express"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/brisk-modules/api"
+	},
+	"bugs": {
+		"url": "https://github.com/brisk-modules/api/issues"
+	},
+	"licenses": [
+		{
+			"type": "MIT License",
+			"url": "http://makesites.org/licenses/MIT"
+		}
+	],
+	"main": "./index.js",
+	"engines": {
+		"node": ">0.8.x"
+	},
+	"dependencies": {
+		"brisk": "0.x",
+		"connect-oauth2": "0.1.0",
+		"redis": "0.10.x"
+	}
+}
