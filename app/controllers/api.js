@@ -1,5 +1,5 @@
 var brisk = require("brisk"),
-	Parent = brisk.getBaseController("main");
+	Parent = brisk.getBaseController("data");
 
 var controller = Parent.extend({
 	name: "api",
