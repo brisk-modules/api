@@ -16,12 +16,13 @@ var helper = Main.extend({
 		//var options = site.getConfig...
 
 		var store = options.store || redis.createClient( options );
-
+		this.store = store;
+		// this is returning an empty object...
 		return store;
 	},
 
 	self: function() {
-		//return this;
+		return this;
 	},
 
 
