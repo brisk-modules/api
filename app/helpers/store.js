@@ -18,6 +18,15 @@ var helper = Main.extend({
 		var store = options.store || redis.createClient( options );
 		this.store = store;
 		// this is returning an empty object...
+		/*
+		// select a different database (with option?)
+		store.select(1, function(err,res){
+			// you'll want to check that the select was successful here
+			// if(err) return err;
+			//store.set('key', 'string'); // this will be posted to database 1 rather than db 0
+		});
+		//
+		*/
 		return store;
 	},
 
