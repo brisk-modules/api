@@ -5,7 +5,7 @@ var controller = Parent.extend({
 	name: "api",
 
 	options: {
-		private: ["isAuthenticated"] // list of inaccessible methods
+		private: ["isAuthenticated", "ensureAuthenticated"] // list of inaccessible methods
 	},
 
 	index : function(req, res){
@@ -21,7 +21,14 @@ var controller = Parent.extend({
 	isAuthenticated: function(req, res){
 		var oauth = req.oauth || false;
 		return ( oauth ) ? true : false;
+	},
+
+	// like isAuthenticated but with a callback... (deprecate?)
+	ensureAuthenticated: function(req, res, next) {
+		next = next || function(){};
+		return( this.isAuthenticated(req, res) ) ? next() : res.end('{}');
 	}
+
 });
 
 
