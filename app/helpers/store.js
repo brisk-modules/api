@@ -10,13 +10,18 @@ var helper = Main.extend({
 	data: {}, // convert this to a model?
 
 	init: function( options ){
-
-		// currently only Redis is supported, with no plans for extending support to other DBs
+		options = options || {};
+		var db;
+		//
 		// get options from site config?
 		//var options = site.getConfig...
 
-		var store = options.store || redis.createClient( options );
-		this.store = store;
+		// currently only Memory & Redis is supported, with no plans for extending support to other DBs
+
+		if( options.store == "redis" ){
+			db = options.db || redis.createClient( options );
+			this.db = db;
+		}
 		// this is returning an empty object...
 		/*
 		// select a different database (with option?)
@@ -27,7 +32,7 @@ var helper = Main.extend({
 		});
 		//
 		*/
-		return store;
+		return db;
 	},
 
 	self: function() {
