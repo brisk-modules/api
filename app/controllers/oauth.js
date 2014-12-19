@@ -19,7 +19,7 @@ var controller = Parent.extend({
 
 	authorize : function(req, res){
 
-		if( !this.isAuthenticated(req, res) ) return res.redirect('/account/login?return=/oauth/authorize');
+		if( !this.isAuthenticated(req, res) ) return res.redirect('/account/login?redirect='+ encodeURIComponent( req.originalUrl) );
 		//
 
 		//add locals (validate?)
