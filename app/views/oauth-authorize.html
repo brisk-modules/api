@@ -1,14 +1,23 @@
+<div class="main">
+	<div class="hero">
+		<div class="login">
+			<h1 class="logo ir">{{site.name}}</h1>
 
-<form action="/oauth/authorize">
-	<input type="hidden" name="user_id" value="{{user}}">
-	<input type="hidden" name="oauth_params" value="{{oauth}}">
-	<input type="hidden" name="grant" value="1">
-	<input type="submit" value="Accept">
-</form>
+			<p>Select below if you'd like to authorize this app:</p>
 
-<form action="/oauth/authorize">
-	<input type="hidden" name="user_id" value="{{user}}">
-	<input type="hidden" name="oauth_params" value="{{oauth}}">
-	<input type="hidden" name="grant" value="0">
-	<input type="submit" value="Deny">
-</form>
+			<form action="/oauth/authorize">
+				<input type="hidden" name="user_id" value="{{user}}">
+				<input type="hidden" name="oauth_params" value="{{oauth}}">
+				<input type="hidden" name="grant" value="1">
+				<input type="submit" value="Accept">
+			</form>
+
+			<form action="/oauth/authorize">
+				<input type="hidden" name="user_id" value="{{user}}">
+				<input type="hidden" name="oauth_params" value="{{oauth}}">
+				<input type="hidden" name="grant" value="0">
+				<input type="submit" value="Deny">
+			</form>
+
+	</div>
+</div>
