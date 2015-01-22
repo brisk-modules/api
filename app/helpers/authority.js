@@ -23,7 +23,12 @@ var helper = Parent.extend({
 
 		return function( data, callback ){
 			// key can be: client_id, client_secret, username, password
-			if( data["client_id"] && data["client_secret"] ){
+			if( data["username"] && data["password"] ){
+				self.getUser({
+					email: data["username"],
+					password: data["password"]
+				}, callback );
+			} else if( data["client_id"] && data["client_secret"] ){
 				self.getItem({
 					key: data["client_id"],
 					secret: data["client_secret"]
@@ -31,11 +36,6 @@ var helper = Parent.extend({
 			} else if( data["client_id"] ){
 				self.getItem({
 					key: data["client_id"]
-				}, callback );
-			} else if( data["username"] && data["password"] ){
-				self.getUser({
-					email: data["username"],
-					token: data["password"]
 				}, callback );
 			}
 		};
