@@ -11,11 +11,13 @@ var helper = Parent.extend({
 	// returns the item with the key/secret creds
 	getItem: function( model, callback ){
 		// extend with your own logic
+		return callback(null, true);
 	},
 
 	// returns the user with the username/password creds
 	getUser: function( model, callback ){
 		// extend with your own logic
+		return callback(null, true);
 	},
 
 	self: function() {
