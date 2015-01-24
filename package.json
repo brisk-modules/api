@@ -1,6 +1,6 @@
 {
 	"name": "brisk-api",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"description": "Brisk module that creates API endpoints, authenticated with OAuth2",
 	"author": "makesites",
 	"contributors": [
@@ -32,7 +32,7 @@
 	},
 	"dependencies": {
 		"brisk": "0.x",
-		"connect-oauth2": ">=0.4.0",
+		"connect-oauth2": ">=0.6.0",
 		"redis": "0.10.x"
 	}
 }
