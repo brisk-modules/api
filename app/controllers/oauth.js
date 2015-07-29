@@ -7,7 +7,7 @@ var controller = Parent.extend({
 	index : function(req, res){
 
 		// no root available for this endpoint
-		return res.redirect('/');
+		//return res.redirect('/'); // ending request elsewhere...
 
 	},
 
